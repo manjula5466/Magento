@@ -1,0 +1,45 @@
+type Query
+{
+    pickupStores:pickupStoresOutput @resolver(class :"Form\\Empmodule\\Model\\Resolver\\Store") 
+    @doc(description: "List of Pickup store.")
+}
+
+ type pickupStoresOutput 
+ {
+    total_count:Int @doc(description: "total stores"),
+    items:[pickupStore] @doc(description: "stores data")
+    
+}
+type pickupStore
+{
+    FirstName:String @doc (description: "store FirstName"),
+    LastName:String @doc(description:"store LastName"),
+    Email:String @doc(description:"store Email"),
+    Telephone:String @doc(description:"store Telephone"),
+    City:String @doc(description:"store City"),
+    State:String @doc(description:"store State"),
+    Country:String @doc(description:"store Country")
+}  
+type Mutation
+{
+   Displaydata:input:DisplaydataInput @resolver(class:"Form\\Empmodule\\Model\\Resolver\\Display")
+    @doc(description: "Output of Mutation.")
+
+    }
+input DisplaydataInput
+{
+    GroudId:Int|@doc(description:"Enter the GroupId")
+    GroupName:String|@doc(description:"Enter the GroupName")
+}
+input Displayoutput
+{
+    GroudId:Int|@doc(description:"Enter the GroupId")
+    GroupName:String|@doc(description:"Enter the GroupName")
+}
+
+    
+
+
+
+
+          

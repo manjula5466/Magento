@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:noNamespaceSchemaLocation="urn:Magento_Backend:etc/menu.xsd">
+<menu>
+       <add id="Form_Empmodule::sample"title="Sample"translate="title"module="Form_Empmodule"sortOrder="10">
+       action="sample/sample" resource="Form_Empmodule::sample"/>
+  </menu>
+</config>
